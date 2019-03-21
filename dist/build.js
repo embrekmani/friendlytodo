@@ -974,7 +974,7 @@ var staticRenderFns = []
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.newToDo),expression:"newToDo"}],staticClass:"todo-input",attrs:{"type":"text","placeholder":"What's on the agenda?"},domProps:{"value":(_vm.newToDo)},on:{"keyup":function($event){if(('keyCode' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.addToDo($event)},"input":function($event){if($event.target.composing){ return; }_vm.newToDo=$event.target.value}}}),_vm._v(" "),_c('transition-group',{attrs:{"name":"fade","enter-active-class":"animated fadeInDown","leave-active-class":"animated fadeOut"}},_vm._l((_vm.todos),function(todo,index){return _c('div',{key:todo.id,staticClass:"todo-item"},[_c('div',{staticClass:"main-todo"},[_c('div',{staticClass:"todo-item-left"},[_c('div',[_c('input',{directives:[{name:"model",rawName:"v-model",value:(todo.complete),expression:"todo.complete"}],staticClass:"check",attrs:{"type":"checkbox"},domProps:{"checked":Array.isArray(todo.complete)?_vm._i(todo.complete,null)>-1:(todo.complete)},on:{"click":function($event){_vm.completeToDo(todo); _vm.removeToDo(index);},"change":function($event){var $$a=todo.complete,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.$set(todo, "complete", $$a.concat([$$v])))}else{$$i>-1&&(_vm.$set(todo, "complete", $$a.slice(0,$$i).concat($$a.slice($$i+1))))}}else{_vm.$set(todo, "complete", $$c)}}}})]),_vm._v(" "),(!todo.editing)?_c('div',{staticClass:"todo-item-label",on:{"dblclick":function($event){return _vm.editToDo(todo)}}},[_vm._v(_vm._s(todo.title))]):_c('input',{directives:[{name:"model",rawName:"v-model",value:(todo.title),expression:"todo.title"},{name:"focus",rawName:"v-focus"}],staticClass:"todo-edit",attrs:{"type":"text"},domProps:{"value":(todo.title)},on:{"focus":function($event){return $event.target.select()},"blur":function($event){return _vm.finishEditing(todo)},"keyup":[function($event){if(('keyCode' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.finishEditing(todo)},function($event){if(('keyCode' in $event)&&_vm._k($event.keyCode,"escape",undefined,$event.key,undefined)){ return null; }return _vm.cancelEdit(todo)}],"input":function($event){if($event.target.composing){ return; }_vm.$set(todo, "title", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"buttons"},[(!todo.isHelp)?_c('div',{staticClass:"add-sub-todo todo-button",on:{"click":function($event){return _vm.addSubTodo(todo)}}},[_vm._v("\n                    +\n                ")]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"remove-todo todo-button",on:{"click":function($event){return _vm.removeToDo(index)}}},[_vm._v("\n                    ×\n                ")])])]),_vm._v(" "),(_vm.calcPercentageComplete(todo) > 0)?_c('hr',{staticClass:"progress-bar",style:({ width: _vm.calcPercentageComplete(todo) + '%' })}):_vm._e(),_vm._v(" "),_vm._l((todo.subTodos),function(subTodo,subIndex){return _c('div',{staticClass:"sub-todo-item"},[_c('div',{staticClass:"main-todo sub-todo"},[_c('div',{staticClass:"todo-item-left"},[_c('div',[_c('input',{directives:[{name:"model",rawName:"v-model",value:(subTodo.complete),expression:"subTodo.complete"}],staticClass:"check",attrs:{"type":"checkbox"},domProps:{"checked":Array.isArray(subTodo.complete)?_vm._i(subTodo.complete,null)>-1:(subTodo.complete)},on:{"change":function($event){var $$a=subTodo.complete,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.$set(subTodo, "complete", $$a.concat([$$v])))}else{$$i>-1&&(_vm.$set(subTodo, "complete", $$a.slice(0,$$i).concat($$a.slice($$i+1))))}}else{_vm.$set(subTodo, "complete", $$c)}}}})]),_vm._v(" "),(!subTodo.editing)?_c('div',{staticClass:"todo-item-label",class:{ complete: subTodo.complete },on:{"dblclick":function($event){return _vm.editToDo(subTodo)}}},[_vm._v(_vm._s(subTodo.title))]):_c('input',{directives:[{name:"model",rawName:"v-model",value:(subTodo.title),expression:"subTodo.title"},{name:"focus",rawName:"v-focus"}],staticClass:"todo-edit",attrs:{"type":"text"},domProps:{"value":(subTodo.title)},on:{"focus":function($event){return $event.target.select()},"blur":function($event){return _vm.finishEditing(subTodo)},"keyup":[function($event){if(('keyCode' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.finishEditing(subTodo)},function($event){if(('keyCode' in $event)&&_vm._k($event.keyCode,"escape",undefined,$event.key,undefined)){ return null; }return _vm.cancelEdit(subTodo)}],"input":function($event){if($event.target.composing){ return; }_vm.$set(subTodo, "title", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"buttons"},[_c('div',{staticClass:"remove-todo todo-button",on:{"click":function($event){return _vm.removeSubTodo(todo, subIndex)}}},[_vm._v("\n                            ×\n                        ")])])])])})],2)}),0),_vm._v(" "),_c('hr'),_vm._v(" "),_c('transition-group',{attrs:{"name":"fade","enter-active-class":"animated fadeIn"}},_vm._l((_vm.done),function(done,doneIndex){return _c('div',{key:done.id,staticClass:"complete-items"},[_c('div',{staticClass:"complete"},[_vm._v(_vm._s(done.title))])])}),0),_vm._v(" "),_c('div',{staticClass:"burger",on:{"click":function($event){_vm.sideMenuOpen = true}}},[_c('i',{staticClass:"fas fa-bars"})]),_vm._v(" "),_c('div',{staticClass:"sidebar",class:{ active: _vm.sideMenuOpen }},[_c('h1',{on:{"click":function($event){_vm.sideMenuOpen = false}}},[_vm._v("×")]),_vm._v(" "),_c('h2',[_vm._v("This is the friendly todo app.")]),_vm._v(" "),_c('p',[_vm._v("When you're hard at work, it's easy to forget the habits of a healthy, more productive lifestyle. The friendly todo app reminds you what you need to do whenever you finish a task.")]),_vm._v(" "),_c('br'),_vm._v(" "),_vm._m(0),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.newHelp),expression:"newHelp"}],attrs:{"type":"text","placeholder":"e.g. Take the dog for a walk."},domProps:{"value":(_vm.newHelp)},on:{"keyup":function($event){if(('keyCode' in $event)&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.addHelp($event)},"input":function($event){if($event.target.composing){ return; }_vm.newHelp=$event.target.value}}}),_vm._v(" "),_vm._m(1),_vm._v(" "),_c('ul',_vm._l((_vm.tips),function(tip){return _c('li',[_vm._v(_vm._s(tip))])}),0)])],1)}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.newToDo),expression:"newToDo"}],staticClass:"todo-input",attrs:{"type":"text","placeholder":"What's on the agenda?"},domProps:{"value":(_vm.newToDo)},on:{"keyup":function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.addToDo($event)},"input":function($event){if($event.target.composing){ return; }_vm.newToDo=$event.target.value}}}),_vm._v(" "),_c('transition-group',{attrs:{"name":"fade","enter-active-class":"animated fadeInDown","leave-active-class":"animated fadeOut"}},_vm._l((_vm.todos),function(todo,index){return _c('div',{key:todo.id,staticClass:"todo-item"},[_c('div',{staticClass:"main-todo"},[_c('div',{staticClass:"todo-item-left"},[_c('div',[_c('input',{directives:[{name:"model",rawName:"v-model",value:(todo.complete),expression:"todo.complete"}],staticClass:"check",attrs:{"type":"checkbox"},domProps:{"checked":Array.isArray(todo.complete)?_vm._i(todo.complete,null)>-1:(todo.complete)},on:{"click":function($event){_vm.completeToDo(todo); _vm.removeToDo(index);},"change":function($event){var $$a=todo.complete,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.$set(todo, "complete", $$a.concat([$$v])))}else{$$i>-1&&(_vm.$set(todo, "complete", $$a.slice(0,$$i).concat($$a.slice($$i+1))))}}else{_vm.$set(todo, "complete", $$c)}}}})]),_vm._v(" "),(!todo.editing)?_c('div',{staticClass:"todo-item-label",on:{"dblclick":function($event){return _vm.editToDo(todo)}}},[_vm._v(_vm._s(todo.title))]):_c('input',{directives:[{name:"model",rawName:"v-model",value:(todo.title),expression:"todo.title"},{name:"focus",rawName:"v-focus"}],staticClass:"todo-edit",attrs:{"type":"text"},domProps:{"value":(todo.title)},on:{"focus":function($event){return $event.target.select()},"blur":function($event){return _vm.finishEditing(todo)},"keyup":[function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.finishEditing(todo)},function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"escape",undefined,$event.key,undefined)){ return null; }return _vm.cancelEdit(todo)}],"input":function($event){if($event.target.composing){ return; }_vm.$set(todo, "title", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"buttons"},[(!todo.isHelp)?_c('div',{staticClass:"add-sub-todo todo-button",on:{"click":function($event){return _vm.addSubTodo(todo)}}},[_vm._v("\n                    +\n                ")]):_vm._e(),_vm._v(" "),_c('div',{staticClass:"remove-todo todo-button",on:{"click":function($event){return _vm.removeToDo(index)}}},[_vm._v("\n                    ×\n                ")])])]),_vm._v(" "),(_vm.calcPercentageComplete(todo) > 0)?_c('hr',{staticClass:"progress-bar",style:({ width: _vm.calcPercentageComplete(todo) + '%' })}):_vm._e(),_vm._v(" "),_vm._l((todo.subTodos),function(subTodo,subIndex){return _c('div',{staticClass:"sub-todo-item"},[_c('div',{staticClass:"main-todo sub-todo"},[_c('div',{staticClass:"todo-item-left"},[_c('div',[_c('input',{directives:[{name:"model",rawName:"v-model",value:(subTodo.complete),expression:"subTodo.complete"}],staticClass:"check",attrs:{"type":"checkbox"},domProps:{"checked":Array.isArray(subTodo.complete)?_vm._i(subTodo.complete,null)>-1:(subTodo.complete)},on:{"change":function($event){var $$a=subTodo.complete,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.$set(subTodo, "complete", $$a.concat([$$v])))}else{$$i>-1&&(_vm.$set(subTodo, "complete", $$a.slice(0,$$i).concat($$a.slice($$i+1))))}}else{_vm.$set(subTodo, "complete", $$c)}}}})]),_vm._v(" "),(!subTodo.editing)?_c('div',{staticClass:"todo-item-label",class:{ complete: subTodo.complete },on:{"dblclick":function($event){return _vm.editToDo(subTodo)}}},[_vm._v(_vm._s(subTodo.title))]):_c('input',{directives:[{name:"model",rawName:"v-model",value:(subTodo.title),expression:"subTodo.title"},{name:"focus",rawName:"v-focus"}],staticClass:"todo-edit",attrs:{"type":"text"},domProps:{"value":(subTodo.title)},on:{"focus":function($event){return $event.target.select()},"blur":function($event){return _vm.finishEditing(subTodo)},"keyup":[function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.finishEditing(subTodo)},function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"escape",undefined,$event.key,undefined)){ return null; }return _vm.cancelEdit(subTodo)}],"input":function($event){if($event.target.composing){ return; }_vm.$set(subTodo, "title", $event.target.value)}}})]),_vm._v(" "),_c('div',{staticClass:"buttons"},[_c('div',{staticClass:"remove-todo todo-button",on:{"click":function($event){return _vm.removeSubTodo(todo, subIndex)}}},[_vm._v("\n                            ×\n                        ")])])])])})],2)}),0),_vm._v(" "),_c('hr'),_vm._v(" "),_c('transition-group',{attrs:{"name":"fade","enter-active-class":"animated fadeIn"}},_vm._l((_vm.done),function(done,doneIndex){return _c('div',{key:done.id,staticClass:"complete-items"},[_c('div',{staticClass:"complete"},[_vm._v(_vm._s(done.title))])])}),0),_vm._v(" "),_c('div',{staticClass:"burger",on:{"click":function($event){_vm.sideMenuOpen = true}}},[_c('i',{staticClass:"fas fa-bars"})]),_vm._v(" "),_c('div',{staticClass:"sidebar",class:{ active: _vm.sideMenuOpen }},[_c('h1',{on:{"click":function($event){_vm.sideMenuOpen = false}}},[_vm._v("×")]),_vm._v(" "),_c('h2',[_vm._v("This is the friendly todo app.")]),_vm._v(" "),_c('p',[_vm._v("When you're hard at work, it's easy to forget the habits of a healthy, more productive lifestyle. The friendly todo app reminds you what you need to do whenever you finish a task.")]),_vm._v(" "),_c('br'),_vm._v(" "),_vm._m(0),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.newHelp),expression:"newHelp"}],attrs:{"type":"text","placeholder":"e.g. Take the dog for a walk."},domProps:{"value":(_vm.newHelp)},on:{"keyup":function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.addHelp($event)},"input":function($event){if($event.target.composing){ return; }_vm.newHelp=$event.target.value}}}),_vm._v(" "),_vm._m(1),_vm._v(" "),_c('ul',_vm._l((_vm.tips),function(tip){return _c('li',[_vm._v(_vm._s(tip))])}),0)])],1)}
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',[_c('strong',[_vm._v("Add something you need to be reminded of every now and then:")])])},function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('p',{staticStyle:{"padding-top":".5rem"}},[_c('strong',[_vm._v("List:")])])}]
 
 
@@ -1414,7 +1414,7 @@ function listToStyles (parentId, list) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(global, setImmediate) {/*!
- * Vue.js v2.6.3
+ * Vue.js v2.6.10
  * (c) 2014-2019 Evan You
  * Released under the MIT License.
  */
@@ -1890,7 +1890,7 @@ var config = ({
  * using https://www.w3.org/TR/html53/semantics-scripting.html#potentialcustomelementname
  * skipping \u10000-\uEFFFF due to it freezing up PhantomJS
  */
-var unicodeLetters = 'a-zA-Z\u00B7\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u037D\u037F-\u1FFF\u200C-\u200D\u203F-\u2040\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD';
+var unicodeRegExp = /a-zA-Z\u00B7\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u037D\u037F-\u1FFF\u200C-\u200D\u203F-\u2040\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD/;
 
 /**
  * Check if a string starts with $ or _
@@ -1915,7 +1915,7 @@ function def (obj, key, val, enumerable) {
 /**
  * Parse simple path.
  */
-var bailRE = new RegExp(("[^" + unicodeLetters + ".$_\\d]"));
+var bailRE = new RegExp(("[^" + (unicodeRegExp.source) + ".$_\\d]"));
 function parsePath (path) {
   if (bailRE.test(path)) {
     return
@@ -2700,7 +2700,7 @@ function checkComponents (options) {
 }
 
 function validateComponentName (name) {
-  if (!new RegExp(("^[a-zA-Z][\\-\\.0-9_" + unicodeLetters + "]*$")).test(name)) {
+  if (!new RegExp(("^[a-zA-Z][\\-\\.0-9_" + (unicodeRegExp.source) + "]*$")).test(name)) {
     warn(
       'Invalid component name: "' + name + '". Component names ' +
       'should conform to valid custom element name in html5 specification.'
@@ -3087,23 +3087,30 @@ function isBoolean () {
 /*  */
 
 function handleError (err, vm, info) {
-  if (vm) {
-    var cur = vm;
-    while ((cur = cur.$parent)) {
-      var hooks = cur.$options.errorCaptured;
-      if (hooks) {
-        for (var i = 0; i < hooks.length; i++) {
-          try {
-            var capture = hooks[i].call(cur, err, vm, info) === false;
-            if (capture) { return }
-          } catch (e) {
-            globalHandleError(e, cur, 'errorCaptured hook');
+  // Deactivate deps tracking while processing error handler to avoid possible infinite rendering.
+  // See: https://github.com/vuejs/vuex/issues/1505
+  pushTarget();
+  try {
+    if (vm) {
+      var cur = vm;
+      while ((cur = cur.$parent)) {
+        var hooks = cur.$options.errorCaptured;
+        if (hooks) {
+          for (var i = 0; i < hooks.length; i++) {
+            try {
+              var capture = hooks[i].call(cur, err, vm, info) === false;
+              if (capture) { return }
+            } catch (e) {
+              globalHandleError(e, cur, 'errorCaptured hook');
+            }
           }
         }
       }
     }
+    globalHandleError(err, vm, info);
+  } finally {
+    popTarget();
   }
-  globalHandleError(err, vm, info);
 }
 
 function invokeWithErrorHandling (
@@ -3116,8 +3123,11 @@ function invokeWithErrorHandling (
   var res;
   try {
     res = args ? handler.apply(context, args) : handler.call(context);
-    if (res && !res._isVue && isPromise(res)) {
+    if (res && !res._isVue && isPromise(res) && !res._handled) {
       res.catch(function (e) { return handleError(e, vm, info + " (Promise/async)"); });
+      // issue #9511
+      // avoid catch triggering multiple times when nested calls
+      res._handled = true;
     }
   } catch (e) {
     handleError(e, vm, info);
@@ -3130,7 +3140,11 @@ function globalHandleError (err, vm, info) {
     try {
       return config.errorHandler.call(null, err, vm, info)
     } catch (e) {
-      logError(e, null, 'config.errorHandler');
+      // if the user intentionally throws the original error in the handler,
+      // do not log it twice
+      if (e !== err) {
+        logError(e, null, 'config.errorHandler');
+      }
     }
   }
   logError(err, vm, info);
@@ -3663,39 +3677,77 @@ function isWhitespace (node) {
 
 function normalizeScopedSlots (
   slots,
-  normalSlots
+  normalSlots,
+  prevSlots
 ) {
   var res;
+  var hasNormalSlots = Object.keys(normalSlots).length > 0;
+  var isStable = slots ? !!slots.$stable : !hasNormalSlots;
+  var key = slots && slots.$key;
   if (!slots) {
     res = {};
   } else if (slots._normalized) {
-    return slots
+    // fast path 1: child component re-render only, parent did not change
+    return slots._normalized
+  } else if (
+    isStable &&
+    prevSlots &&
+    prevSlots !== emptyObject &&
+    key === prevSlots.$key &&
+    !hasNormalSlots &&
+    !prevSlots.$hasNormal
+  ) {
+    // fast path 2: stable scoped slots w/ no normal slots to proxy,
+    // only need to normalize once
+    return prevSlots
   } else {
     res = {};
-    for (var key in slots) {
-      if (slots[key] && key[0] !== '$') {
-        res[key] = normalizeScopedSlot(slots[key]);
+    for (var key$1 in slots) {
+      if (slots[key$1] && key$1[0] !== '$') {
+        res[key$1] = normalizeScopedSlot(normalSlots, key$1, slots[key$1]);
       }
     }
   }
   // expose normal slots on scopedSlots
-  for (var key$1 in normalSlots) {
-    if (!(key$1 in res)) {
-      res[key$1] = proxyNormalSlot(normalSlots, key$1);
+  for (var key$2 in normalSlots) {
+    if (!(key$2 in res)) {
+      res[key$2] = proxyNormalSlot(normalSlots, key$2);
     }
   }
-  def(res, '_normalized', true);
-  def(res, '$stable', slots ? !!slots.$stable : true);
+  // avoriaz seems to mock a non-extensible $scopedSlots object
+  // and when that is passed down this would cause an error
+  if (slots && Object.isExtensible(slots)) {
+    (slots)._normalized = res;
+  }
+  def(res, '$stable', isStable);
+  def(res, '$key', key);
+  def(res, '$hasNormal', hasNormalSlots);
   return res
 }
 
-function normalizeScopedSlot(fn) {
-  return function (scope) {
-    var res = fn(scope);
-    return res && typeof res === 'object' && !Array.isArray(res)
+function normalizeScopedSlot(normalSlots, key, fn) {
+  var normalized = function () {
+    var res = arguments.length ? fn.apply(null, arguments) : fn({});
+    res = res && typeof res === 'object' && !Array.isArray(res)
       ? [res] // single vnode
-      : normalizeChildren(res)
+      : normalizeChildren(res);
+    return res && (
+      res.length === 0 ||
+      (res.length === 1 && res[0].isComment) // #9658
+    ) ? undefined
+      : res
+  };
+  // this is a slot using the new v-slot syntax without scope. although it is
+  // compiled as a scoped slot, render fn users would expect it to be present
+  // on this.$slots because the usage is semantically a normal slot.
+  if (fn.proxy) {
+    Object.defineProperty(normalSlots, key, {
+      get: normalized,
+      enumerable: true,
+      configurable: true
+    });
   }
+  return normalized
 }
 
 function proxyNormalSlot(slots, key) {
@@ -3854,12 +3906,13 @@ function bindObjectProps (
             : data.attrs || (data.attrs = {});
         }
         var camelizedKey = camelize(key);
-        if (!(key in hash) && !(camelizedKey in hash)) {
+        var hyphenatedKey = hyphenate(key);
+        if (!(camelizedKey in hash) && !(hyphenatedKey in hash)) {
           hash[key] = value[key];
 
           if (isSync) {
             var on = data.on || (data.on = {});
-            on[("update:" + camelizedKey)] = function ($event) {
+            on[("update:" + key)] = function ($event) {
               value[key] = $event;
             };
           }
@@ -3955,17 +4008,26 @@ function bindObjectListeners (data, value) {
 
 function resolveScopedSlots (
   fns, // see flow/vnode
+  res,
+  // the following are added in 2.6
   hasDynamicKeys,
-  res
+  contentHashKey
 ) {
   res = res || { $stable: !hasDynamicKeys };
   for (var i = 0; i < fns.length; i++) {
     var slot = fns[i];
     if (Array.isArray(slot)) {
-      resolveScopedSlots(slot, hasDynamicKeys, res);
+      resolveScopedSlots(slot, res, hasDynamicKeys);
     } else if (slot) {
+      // marker for reverse proxying v-slot without scope on this.$slots
+      if (slot.proxy) {
+        slot.fn.proxy = true;
+      }
       res[slot.key] = slot.fn;
     }
+  }
+  if (contentHashKey) {
+    (res).$key = contentHashKey;
   }
   return res
 }
@@ -4020,6 +4082,8 @@ function FunctionalRenderContext (
   parent,
   Ctor
 ) {
+  var this$1 = this;
+
   var options = Ctor.options;
   // ensure the createElement function in functional components
   // gets a unique context - this is necessary for correct named slot check
@@ -4045,7 +4109,15 @@ function FunctionalRenderContext (
   this.parent = parent;
   this.listeners = data.on || emptyObject;
   this.injections = resolveInject(options.inject, parent);
-  this.slots = function () { return resolveSlots(children, parent); };
+  this.slots = function () {
+    if (!this$1.$slots) {
+      normalizeScopedSlots(
+        data.scopedSlots,
+        this$1.$slots = resolveSlots(children, parent)
+      );
+    }
+    return this$1.$slots
+  };
 
   Object.defineProperty(this, 'scopedSlots', ({
     enumerable: true,
@@ -4551,7 +4623,8 @@ function renderMixin (Vue) {
     if (_parentVnode) {
       vm.$scopedSlots = normalizeScopedSlots(
         _parentVnode.data.scopedSlots,
-        vm.$slots
+        vm.$slots,
+        vm.$scopedSlots
       );
     }
 
@@ -4631,17 +4704,23 @@ function resolveAsyncComponent (
     return factory.resolved
   }
 
+  var owner = currentRenderingInstance;
+  if (owner && isDef(factory.owners) && factory.owners.indexOf(owner) === -1) {
+    // already pending
+    factory.owners.push(owner);
+  }
+
   if (isTrue(factory.loading) && isDef(factory.loadingComp)) {
     return factory.loadingComp
   }
 
-  var owner = currentRenderingInstance;
-  if (isDef(factory.owners)) {
-    // already pending
-    factory.owners.push(owner);
-  } else {
+  if (owner && !isDef(factory.owners)) {
     var owners = factory.owners = [owner];
     var sync = true;
+    var timerLoading = null;
+    var timerTimeout = null
+
+    ;(owner).$on('hook:destroyed', function () { return remove(owners, owner); });
 
     var forceRender = function (renderCompleted) {
       for (var i = 0, l = owners.length; i < l; i++) {
@@ -4650,6 +4729,14 @@ function resolveAsyncComponent (
 
       if (renderCompleted) {
         owners.length = 0;
+        if (timerLoading !== null) {
+          clearTimeout(timerLoading);
+          timerLoading = null;
+        }
+        if (timerTimeout !== null) {
+          clearTimeout(timerTimeout);
+          timerTimeout = null;
+        }
       }
     };
 
@@ -4693,7 +4780,8 @@ function resolveAsyncComponent (
           if (res.delay === 0) {
             factory.loading = true;
           } else {
-            setTimeout(function () {
+            timerLoading = setTimeout(function () {
+              timerLoading = null;
               if (isUndef(factory.resolved) && isUndef(factory.error)) {
                 factory.loading = true;
                 forceRender(false);
@@ -4703,7 +4791,8 @@ function resolveAsyncComponent (
         }
 
         if (isDef(res.timeout)) {
-          setTimeout(function () {
+          timerTimeout = setTimeout(function () {
+            timerTimeout = null;
             if (isUndef(factory.resolved)) {
               reject(
                  false
@@ -5047,9 +5136,12 @@ function updateChildComponent (
   // check if there are dynamic scopedSlots (hand-written or compiled but with
   // dynamic slot names). Static scoped slots compiled from template has the
   // "$stable" marker.
+  var newScopedSlots = parentVnode.data.scopedSlots;
+  var oldScopedSlots = vm.$scopedSlots;
   var hasDynamicScopedSlot = !!(
-    (parentVnode.data.scopedSlots && !parentVnode.data.scopedSlots.$stable) ||
-    (vm.$scopedSlots !== emptyObject && !vm.$scopedSlots.$stable)
+    (newScopedSlots && !newScopedSlots.$stable) ||
+    (oldScopedSlots !== emptyObject && !oldScopedSlots.$stable) ||
+    (newScopedSlots && vm.$scopedSlots.$key !== newScopedSlots.$key)
   );
 
   // Any static slot children from the parent may have changed during parent's
@@ -5198,11 +5290,21 @@ var getNow = Date.now;
 // timestamp can either be hi-res (relative to page load) or low-res
 // (relative to UNIX epoch), so in order to compare time we have to use the
 // same timestamp type when saving the flush timestamp.
-if (inBrowser && getNow() > document.createEvent('Event').timeStamp) {
-  // if the low-res timestamp which is bigger than the event timestamp
-  // (which is evaluated AFTER) it means the event is using a hi-res timestamp,
-  // and we need to use the hi-res version for event listeners as well.
-  getNow = function () { return performance.now(); };
+// All IE versions use low-res event timestamps, and have problematic clock
+// implementations (#9632)
+if (inBrowser && !isIE) {
+  var performance = window.performance;
+  if (
+    performance &&
+    typeof performance.now === 'function' &&
+    getNow() > document.createEvent('Event').timeStamp
+  ) {
+    // if the event timestamp, although evaluated AFTER the Date.now(), is
+    // smaller than it, it means the event is using a hi-res timestamp,
+    // and we need to use the hi-res version for event listener timestamps as
+    // well.
+    getNow = function () { return performance.now(); };
+  }
 }
 
 /**
@@ -6246,7 +6348,7 @@ Object.defineProperty(Vue, 'FunctionalRenderContext', {
   value: FunctionalRenderContext
 });
 
-Vue.version = '2.6.3';
+Vue.version = '2.6.10';
 
 /*  */
 
@@ -8251,9 +8353,19 @@ function add$1 (
     var original = handler;
     handler = original._wrapper = function (e) {
       if (
+        // no bubbling, should always fire.
+        // this is just a safety net in case event.timeStamp is unreliable in
+        // certain weird environments...
+        e.target === e.currentTarget ||
+        // event is fired after handler attachment
         e.timeStamp >= attachedTimestamp ||
+        // bail for environments that have buggy event.timeStamp implementations
+        // #9462 iOS 9 bug: event.timeStamp is 0 after history.pushState
+        // #9681 QtWebEngine event.timeStamp is negative value
+        e.timeStamp <= 0 ||
         // #9448 bail if event is fired in another document in a multi-page
-        // electron/nw.js app
+        // electron/nw.js app, since event.timeStamp will be using a different
+        // starting reference
         e.target.ownerDocument !== document
       ) {
         return original.apply(this, arguments)
@@ -8317,10 +8429,11 @@ function updateDOMProps (oldVnode, vnode) {
   }
 
   for (key in oldProps) {
-    if (isUndef(props[key])) {
+    if (!(key in props)) {
       elm[key] = '';
     }
   }
+
   for (key in props) {
     cur = props[key];
     // ignore children if the node has textContent or innerHTML,
@@ -8336,15 +8449,7 @@ function updateDOMProps (oldVnode, vnode) {
       }
     }
 
-    // skip the update if old and new VDOM state is the same.
-    // the only exception is `value` where the DOM value may be temporarily
-    // out of sync with VDOM state due to focus, composition and modifiers.
-    // This also covers #4521 by skipping the unnecesarry `checked` update.
-    if (key !== 'value' && cur === oldProps[key]) {
-      continue
-    }
-
-    if (key === 'value') {
+    if (key === 'value' && elm.tagName !== 'PROGRESS') {
       // store value as _value as well since
       // non-string values will be stringified
       elm._value = cur;
@@ -8364,8 +8469,18 @@ function updateDOMProps (oldVnode, vnode) {
       while (svg.firstChild) {
         elm.appendChild(svg.firstChild);
       }
-    } else {
-      elm[key] = cur;
+    } else if (
+      // skip the update if old and new VDOM state is the same.
+      // `value` is handled separately because the DOM value may be temporarily
+      // out of sync with VDOM state due to focus, composition and modifiers.
+      // This  #4521 by skipping the unnecesarry `checked` update.
+      cur !== oldProps[key]
+    ) {
+      // some property updates can throw
+      // e.g. `value` on <progress> w/ non-finite value
+      try {
+        elm[key] = cur;
+      } catch (e) {}
     }
   }
 }
@@ -8866,8 +8981,8 @@ function enter (vnode, toggleDisplay) {
   var context = activeInstance;
   var transitionNode = activeInstance.$vnode;
   while (transitionNode && transitionNode.parent) {
-    transitionNode = transitionNode.parent;
     context = transitionNode.context;
+    transitionNode = transitionNode.parent;
   }
 
   var isAppear = !context._isMounted || !vnode.isRootInsert;
@@ -9902,7 +10017,7 @@ var isNonPhrasingTag = makeMap(
 // Regular Expressions for parsing tags and attributes
 var attribute = /^\s*([^\s"'<>\/=]+)(?:\s*(=)\s*(?:"([^"]*)"+|'([^']*)'+|([^\s"'=<>`]+)))?/;
 var dynamicArgAttribute = /^\s*((?:v-[\w-]+:|@|:|#)\[[^=]+\][^\s"'<>\/=]*)(?:\s*(=)\s*(?:"([^"]*)"+|'([^']*)'+|([^\s"'=<>`]+)))?/;
-var ncname = "[a-zA-Z_][\\-\\.0-9_a-zA-Z" + unicodeLetters + "]*";
+var ncname = "[a-zA-Z_][\\-\\.0-9_a-zA-Z" + (unicodeRegExp.source) + "]*";
 var qnameCapture = "((?:" + ncname + "\\:)?" + ncname + ")";
 var startTagOpen = new RegExp(("^<" + qnameCapture));
 var startTagClose = /^\s*(\/?)>/;
@@ -10190,7 +10305,7 @@ var dynamicArgRE = /^\[.*\]$/;
 
 var argRE = /:(.*)$/;
 var bindRE = /^:|^\.|^v-bind:/;
-var modifierRE = /\.[^.]+/g;
+var modifierRE = /\.[^.\]]+(?=[^\]]*$)/g;
 
 var slotRE = /^v-slot(:|$)|^#/;
 
@@ -10358,7 +10473,7 @@ function parse (
     shouldDecodeNewlinesForHref: options.shouldDecodeNewlinesForHref,
     shouldKeepComment: options.comments,
     outputSourceRange: options.outputSourceRange,
-    start: function start (tag, attrs, unary, start$1) {
+    start: function start (tag, attrs, unary, start$1, end) {
       // check namespace.
       // inherit parent ns if there is one
       var ns = (currentParent && currentParent.ns) || platformGetTagNamespace(tag);
@@ -10457,7 +10572,7 @@ function parse (
         text = preserveWhitespace ? ' ' : '';
       }
       if (text) {
-        if (whitespaceOption === 'condense') {
+        if (!inPre && whitespaceOption === 'condense') {
           // condense consecutive whitespaces into single space
           text = text.replace(whitespaceRE$1, ' ');
         }
@@ -11194,7 +11309,7 @@ function isDirectChildOfTemplateFor (node) {
 
 /*  */
 
-var fnExpRE = /^([\w$_]+|\([^)]*?\))\s*=>|^function\s*\(/;
+var fnExpRE = /^([\w$_]+|\([^)]*?\))\s*=>|^function\s*(?:[\w$]+)?\s*\(/;
 var fnInvokeRE = /\([^)]*?\);*$/;
 var simplePathRE = /^[A-Za-z_$][\w$]*(?:\.[A-Za-z_$][\w$]*|\['[^']*?']|\["[^"]*?"]|\[\d+]|\[[A-Za-z_$][\w$]*])*$/;
 
@@ -11329,7 +11444,13 @@ function genHandler (handler) {
 }
 
 function genKeyFilter (keys) {
-  return ("if(('keyCode' in $event)&&" + (keys.map(genFilterCode).join('&&')) + ")return null;")
+  return (
+    // make sure the key filters only apply to KeyboardEvents
+    // #9441: can't use 'keyCode' in $event because Chrome autofill fires fake
+    // key events that do not have keyCode property...
+    "if(!$event.type.indexOf('key')&&" +
+    (keys.map(genFilterCode).join('&&')) + ")return null;"
+  )
 }
 
 function genFilterCode (key) {
@@ -11669,26 +11790,68 @@ function genScopedSlots (
   // components with only scoped slots to skip forced updates from parent.
   // but in some cases we have to bail-out of this optimization
   // for example if the slot contains dynamic names, has v-if or v-for on them...
-  var needsForceUpdate = Object.keys(slots).some(function (key) {
+  var needsForceUpdate = el.for || Object.keys(slots).some(function (key) {
     var slot = slots[key];
-    return slot.slotTargetDynamic || slot.if || slot.for
+    return (
+      slot.slotTargetDynamic ||
+      slot.if ||
+      slot.for ||
+      containsSlotChild(slot) // is passing down slot from parent which may be dynamic
+    )
   });
-  // OR when it is inside another scoped slot (the reactivity is disconnected)
-  // #9438
+
+  // #9534: if a component with scoped slots is inside a conditional branch,
+  // it's possible for the same component to be reused but with different
+  // compiled slot content. To avoid that, we generate a unique key based on
+  // the generated code of all the slot contents.
+  var needsKey = !!el.if;
+
+  // OR when it is inside another scoped slot or v-for (the reactivity may be
+  // disconnected due to the intermediate scope variable)
+  // #9438, #9506
+  // TODO: this can be further optimized by properly analyzing in-scope bindings
+  // and skip force updating ones that do not actually use scope variables.
   if (!needsForceUpdate) {
     var parent = el.parent;
     while (parent) {
-      if (parent.slotScope && parent.slotScope !== emptySlotScopeToken) {
+      if (
+        (parent.slotScope && parent.slotScope !== emptySlotScopeToken) ||
+        parent.for
+      ) {
         needsForceUpdate = true;
         break
+      }
+      if (parent.if) {
+        needsKey = true;
       }
       parent = parent.parent;
     }
   }
 
-  return ("scopedSlots:_u([" + (Object.keys(slots).map(function (key) {
-      return genScopedSlot(slots[key], state)
-    }).join(',')) + "]" + (needsForceUpdate ? ",true" : "") + ")")
+  var generatedSlots = Object.keys(slots)
+    .map(function (key) { return genScopedSlot(slots[key], state); })
+    .join(',');
+
+  return ("scopedSlots:_u([" + generatedSlots + "]" + (needsForceUpdate ? ",null,true" : "") + (!needsForceUpdate && needsKey ? (",null,false," + (hash(generatedSlots))) : "") + ")")
+}
+
+function hash(str) {
+  var hash = 5381;
+  var i = str.length;
+  while(i) {
+    hash = (hash * 33) ^ str.charCodeAt(--i);
+  }
+  return hash >>> 0
+}
+
+function containsSlotChild (el) {
+  if (el.type === 1) {
+    if (el.tag === 'slot') {
+      return true
+    }
+    return el.children.some(containsSlotChild)
+  }
+  return false
 }
 
 function genScopedSlot (
@@ -11711,7 +11874,9 @@ function genScopedSlot (
         ? ("(" + (el.if) + ")?" + (genChildren(el, state) || 'undefined') + ":undefined")
         : genChildren(el, state) || 'undefined'
       : genElement(el, state)) + "}";
-  return ("{key:" + (el.slotTarget || "\"default\"") + ",fn:" + fn + "}")
+  // reverse proxy v-slot without scope on this.$slots
+  var reverseProxy = slotScope ? "" : ",proxy:true";
+  return ("{key:" + (el.slotTarget || "\"default\"") + ",fn:" + fn + reverseProxy + "}")
 }
 
 function genChildren (
@@ -12011,11 +12176,13 @@ function generateCodeFrame (
 
 function repeat$1 (str, n) {
   var result = '';
-  while (true) { // eslint-disable-line
-    if (n & 1) { result += str; }
-    n >>>= 1;
-    if (n <= 0) { break }
-    str += str;
+  if (n > 0) {
+    while (true) { // eslint-disable-line
+      if (n & 1) { result += str; }
+      n >>>= 1;
+      if (n <= 0) { break }
+      str += str;
+    }
   }
   return result
 }

@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "bulma": "^0.7.4",
-    "vue": "^2.5.11",
+    "vue": "^2.6.10",
     "vue-burger-menu": "^2.0.1"
   },
   "browserslist": [
@@ -29,10 +29,10 @@
     "file-loader": "^1.1.4",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
-    "vue-loader": "^15.6.2",
-    "vue-template-compiler": "^2.4.4",
-    "webpack": "^4.29.2",
-    "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.1.14"
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
   }
 }
